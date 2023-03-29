@@ -4,6 +4,7 @@ import com.example.Pages.homePage;
 import com.example.Pages.loginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -41,4 +42,25 @@ public class Home {
         Thread.sleep(100);
     }
 
+    @And("click on cart")
+    public void clickOnCart() throws InterruptedException {
+        home.click_cart();
+        Thread.sleep(50);
+    }
+
+    @And("{string} will be display in cart page")
+    public void willBeDisplayInCartPage(String cart_title) throws InterruptedException {
+
+        String Actual_Text =  home.verifyCartPageTitle();
+        Assert.assertEquals(Actual_Text, cart_title);
+        Thread.sleep(100);
+
+    }
+
+    @And("item should be display in cart page")
+    public void itemShouldBeDisplayInCartPage() {
+        home.verifyCartPageitem();
+        Assert.assertTrue(true);
+
+    }
 }

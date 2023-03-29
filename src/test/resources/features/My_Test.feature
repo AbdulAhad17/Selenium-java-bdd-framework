@@ -1,4 +1,4 @@
-Feature: Login to HRM Application
+Feature: Login to saucedemo Application
 
   Background:
     Given User is on saucedemoLogin page "https://www.saucedemo.com/"

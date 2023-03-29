@@ -12,6 +12,9 @@ public class homePage {
     By add_cart = By.id("add-to-cart-sauce-labs-backpack");
     public By filter_product = By.xpath("//*[@data-test=\"product_sort_container\"]");
     By Remove_button = By.id("remove-sauce-labs-backpack");
+    By cart_link = By.id("shopping_cart_container");
+    By cart_title = By.xpath("//*[@id=\"header_container\"]/div[2]/span");
+    By cart_item = By.className("cart_item");
 
     //Method to capture the page heading
     public String getHeading() {
@@ -37,4 +40,19 @@ public class homePage {
         selectFromDropdown.selectByIndex(valueToBeSelectedindex);
 
     }
+
+    public void click_cart(){
+        driver.findElement(cart_link).click();
+
+    }
+    public String verifyCartPageTitle() {
+        String cart_pae_title = driver.findElement(cart_title).getText();
+        return cart_pae_title;
+    }
+
+    public void verifyCartPageitem() {
+       driver.findElement(cart_item).isDisplayed();
+    }
+
+
 }

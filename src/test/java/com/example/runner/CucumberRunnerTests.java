@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "", features = {"src/test/resources/features/My_Test2.feature"}, glue = {"com.example.definitions"},
+@CucumberOptions(tags = "", features = {"src/test/resources/features"}, glue = {"com.example.definitions"},
         plugin = { "pretty", "html:target/cucumber-reports.html" }
                  )
 
