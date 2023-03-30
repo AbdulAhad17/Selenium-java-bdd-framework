@@ -50,7 +50,7 @@ Install the java and maven and clone the build then:
 
 
 ## Execution of tests
-There are 2 scenarios named as @scenario1 and @scenario2. Ran the tests on chrome54.0, firefox46 on ubuntu 14.04 64 bit
+There are 2 scenarios named as @ValidCredentials,FilterProduct and @AddToCart Ran the tests on browser
 
 To run scenarios (@ValidCredentials,@AddToCart,@FilterProduct)
 
